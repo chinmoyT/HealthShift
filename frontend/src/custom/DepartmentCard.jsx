@@ -10,17 +10,16 @@ import React from "react";
 
 const DepartmentCard = ({ name, hod, hodOffice, hodPhoneNumber }) => {
   return (
-    <Card className="w-full max-w-md shadow-md hover:shadow-lg transition-shadow rounded-2xl">
-      {/* Department Title */}
+    <Card className="w-full max-w-lg shadow-md hover:shadow-lg transition-shadow rounded-2xl">
+      
       <CardHeader className="border-b">
         <CardTitle className="text-xl font-semibold text-gray-800">
           {name}
         </CardTitle>
       </CardHeader>
 
-      {/* Department Details */}
       <CardContent className="space-y-4 mt-4">
-        {/* HOD Section */}
+        
         <div className="flex items-center gap-3">
           <Avatar className="h-10 w-10">
             <AvatarFallback>

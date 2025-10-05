@@ -3,12 +3,13 @@ import Login from "./views/Login";
 import Home from "./views/Home";
 import Layout from "./custom/Layout";
 import ProtectedRoute from "./utils/ProtectedRoute";
-import UserlistPage from "./custom/@usermanagement/UserlistPage";
-import Analytics from "./custom/@analytics/Analytics";
+import UserlistPage from "./views/@usermanagement/UserlistPage";
+import Analytics from "./views/@analytics/Analytics";
 import PageNotFound from "./views/PageNotFound";
 import StaffList from "./views/@staff/StaffList";
 import StaffDetails from "./views/@staff/StaffDetails";
-import DepartmentList from "./custom/@department/DepartmentList";
+import DepartmentList from "./views/@department/DepartmentList";
+import DepartmentDetails from "./views/@department/DepartmentDetails";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
           {
             path: "/department",
             element: <DepartmentList />
+          },
+          {
+            path: "/department/:id",
+            element: <DepartmentDetails />
           }
         ],
       },

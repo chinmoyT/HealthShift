@@ -11,22 +11,12 @@ const staffProfileSchema = new mongoose.Schema({
         type: Number
     },
     department: {
-        // type: String,
-        // enum: ['CARDIOLOGY', 'NEUROLOGY', 'ORTHOPEDICS', 'RADIOLOGY', 'EMERGENCY', 'PEDIATRICS', 'ONCOLOGY', 'GYNECOLOGY', 'UROLOGY',
-        //     'DERMATOLOGY', 'OPHTHALMOLOGY', 'ENT', 'ANESTHESIOLOGY', 'PATHOLOGY', 'PSYCHIATRY'
-        // ]
-        // // required: true
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Department'
     },
     phoneNumber: {
         type: Number,
-        // required: true
     },
-    // speciality: {
-    //     type: String,
-    //     // required: true
-    // },
     availability: {
         type: Boolean
     },

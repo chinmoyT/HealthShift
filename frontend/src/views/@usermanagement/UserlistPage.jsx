@@ -12,7 +12,7 @@ import {
 import {Button} from "@/components/ui/button";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserList, getUserById, clearUserById, deactivateUser } from "../../redux/slices/user";
-import Spinner from "../@common/Spinner";
+import Spinner from "../../custom/@common/Spinner";
 import { Trash, SquarePen } from "lucide-react";
 import {
   Tooltip,
@@ -20,6 +20,7 @@ import {
   TooltipContent,
 } from "@/components/ui/tooltip";
 import UserSidePanel from "./UserSidePanel";
+import Loader from "../../custom/@common/Loader";
 
 const UserlistPage = () => {
   const dispatch = useDispatch();
@@ -68,7 +69,7 @@ const UserlistPage = () => {
         />
       </div>
       {loading ? (
-        <Spinner />
+        <Loader />
       ) : (
         <Table>
           <TableHeader>

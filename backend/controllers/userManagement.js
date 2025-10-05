@@ -261,7 +261,7 @@ async function getStaffProfileList(req, res) {
     });
   }
 
-  const staffProfiles = await StaffProfile.find().populate("user", "-password");
+  const staffProfiles = await StaffProfile.find().populate("user", "-password").populate("department");
   if (!staffProfiles || staffProfiles.length === 0) {
     return res.status(404).json({
       status: false,

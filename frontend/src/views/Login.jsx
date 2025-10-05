@@ -11,7 +11,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { loginUser, userAccess } from "../redux/slices/auth";
 import localStorageUtils from "../utils/localStorage";
 import { useNavigate } from "react-router-dom";
